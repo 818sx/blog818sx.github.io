@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://blog818sx.github.io</id>
+    <title>818视讯</title>
+    <updated>2025-04-25T18:23:07.292Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://blog818sx.github.io"/>
+    <link rel="self" href="https://blog818sx.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://blog818sx.github.io/images/avatar.png</logo>
+    <icon>https://blog818sx.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2025, 818视讯</rights>
+    <entry>
+        <title type="html"><![CDATA[Rustdesk自建服务器]]></title>
+        <id>https://blog818sx.github.io/post/rustdesk-zi-jian-fu-wu-qi/</id>
+        <link href="https://blog818sx.github.io/post/rustdesk-zi-jian-fu-wu-qi/">
+        </link>
+        <updated>2025-04-25T18:02:22.000Z</updated>
+        <content type="html"><![CDATA[<p>安装pm2</p>
+<pre><code>sudo apt install npm
+sudo npm install -g pm2
+</code></pre>
+<p>安装rustdesk server</p>
+<pre><code>sudo apt install wget
+wget --no-check-certificate https://github.com/rustdesk/rustdesk-server/releases/download/1.1.6/rustdesk-server-linux-x64.zip
+unzip rustdesk-server-linux-x64.zip
+</code></pre>
+<p>启动</p>
+<pre><code>pm2 start hbbs -- -r x.x.x.xIP -k XXXXXkey密码
+pm2 start hbbr
+</code></pre>
+<p>打开防火墙端口</p>
+<p>返回控制台，打开防火墙-添加规则，以下端口全部开放：</p>
+<p>21115、21116（TCP/UDP）、21117、21118、21119</p>
+<p>软件商设置设置rustdesk  ID服务器</p>
+<p>x.x.x.x:21116<br>
+key密码</p>
+]]></content>
+    </entry>
+</feed>
